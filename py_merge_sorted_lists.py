@@ -12,7 +12,6 @@ def merge_sorted_lists(lists: list[list[int]]) -> list[int]:
 
 
 if __name__ == "__main__":
-    
     print(merge_sorted_lists([[1, 3, 5], [2, 4, 6]]))
     print(merge_sorted_lists([[1, 5, 9], [2, 3, 8], [4, 6, 7]]))
     print(merge_sorted_lists([[5], [1, 3], [2, 4]]))

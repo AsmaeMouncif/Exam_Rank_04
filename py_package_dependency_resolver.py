@@ -23,11 +23,12 @@ def package_dependency_resolver(packages: dict[str, list[str]]) -> list[str]:
             key = ready[i]
             result.append(key)
             new_dict.pop(key)
-            for dependencies in new_dict.values():
-                if key in dependencies:
-                    dependencies.remove(key)
+            for depen in new_dict.values():
+                if key in depen:
+                    depen.remove(key)
             i = i + 1
     return result
+
 
 if __name__ == "__main__":
     print(package_dependency_resolver({"app": ["database"], "database": ["driver"], "driver": []}))
